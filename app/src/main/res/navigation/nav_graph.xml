@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.androiddatabaselesson2phoneapp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addPhoneTypeFragment"
+            app:destination="@id/addPhoneTypeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_phonesFragment"
+            app:destination="@id/phonesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPhoneTypeFragment"
+        android:name="com.example.androiddatabaselesson2phoneapp.AddPhoneTypeFragment"
+        android:label="fragment_add_phone_type"
+        tools:layout="@layout/fragment_add_phone_type" >
+        <action
+            android:id="@+id/action_addPhoneTypeFragment_to_addPhoneDetailsFragment"
+            app:destination="@id/addPhoneDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPhoneDetailsFragment"
+        android:name="com.example.androiddatabaselesson2phoneapp.AddPhoneDetailsFragment"
+        android:label="fragment_add_phone_details"
+        tools:layout="@layout/fragment_add_phone_details" />
+    <fragment
+        android:id="@+id/phonesFragment"
+        android:name="com.example.androiddatabaselesson2phoneapp.PhonesFragment"
+        android:label="fragment_phones"
+        tools:layout="@layout/fragment_phones" >
+        <action
+            android:id="@+id/action_phonesFragment_to_phoneListFragment"
+            app:destination="@id/phoneListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneListFragment"
+        android:name="com.example.androiddatabaselesson2phoneapp.PhoneListFragment"
+        android:label="fragment_phone_list"
+        tools:layout="@layout/fragment_phone_list" >
+        <action
+            android:id="@+id/action_phoneListFragment_to_aboutPhoneFragment"
+            app:destination="@id/aboutPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutPhoneFragment"
+        android:name="com.example.androiddatabaselesson2phoneapp.AboutPhoneFragment"
+        android:label="fragment_about_phone"
+        tools:layout="@layout/fragment_about_phone" />
+</navigation>
